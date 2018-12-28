@@ -50,15 +50,25 @@ function removeFromCart(item) {
   return "That item is not in your cart."; 
 }
 
+// function placeOrder(cardNumber) {
+//   if (cardNumber) {
+//     return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
+//     cart.length = 0;
+//     // for (var i = cart.length; i > 0; i--) {
+//     //   cart.pop();
+//     // }
+//   } else {
+//     return "Sorry, we don't have a credit card on file for you.";
+//   }
+//   //return cart;
+// }
+
 function placeOrder(cardNumber) {
   if (cardNumber) {
-    return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
-    cart.length = 0;
-    // for (var i = cart.length; i > 0; i--) {
-    //   cart.pop();
-    // }
+    let totalCartValue = total();
+    cart.length = 0; 
+    return `Your total cost is $${totalCartValue}, which will be charged to the card ${cardNumber}.`
   } else {
     return "Sorry, we don't have a credit card on file for you.";
   }
-  //return cart;
 }
